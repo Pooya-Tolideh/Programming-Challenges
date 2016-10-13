@@ -1,4 +1,4 @@
-# This program gets your age in total seconds and returns how old you actually are are
+# This program gets your age in total seconds and returns how old you actually are
 # example: 1246000000 => 39yr, 5mth, 24d, 0hr, 0min, 40sec
 
 # assumtion_1: Each year is 365.25 days
