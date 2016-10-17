@@ -1,4 +1,4 @@
-# This is a simple monty hall game where the game advances based on user's choice
+# This is a simple monty hall game where the game advances based on user's choices
 # The goal was to practice concepts such as loops, methods, i/o and control-flow
 
 
