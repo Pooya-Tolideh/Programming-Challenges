@@ -28,6 +28,21 @@ def start()
 			arr << item
 		end
 	end
+	
+	puts "\n" + ("-" * 10)
+
+	while true
+		puts "\n Would like me to use a temporary array or not? [yes/no]"
+		answer = $stdin.gets.chomp.downcase
+		if answer == "yes"
+			# method_1()
+			break
+		elsif answer == "no"
+			# method_2()
+		else
+			puts "\nwrong answer!"
+		end
+	end
 end
 
 start
