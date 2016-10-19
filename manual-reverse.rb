@@ -14,8 +14,14 @@
 # 	arr[(arr_ln - i)] = x
 # end
 
-def start()
+def method_1(arr)
+	arr_rev = []
+	arr_rev << arr.pop until arr.empty?
+	return arr_rev
+end
 
+
+def start()
 	puts "Give me some stuff to put in an array. Say \"done\" when your array is finished"
 	
 	arr = []
@@ -23,6 +29,7 @@ def start()
 		print "> "
 		item = $stdin.gets.chomp
 		if item.downcase == "done"
+			puts "\n your array is: #{arr}"
 			break
 		else
 			arr << item
@@ -43,6 +50,9 @@ def start()
 			puts "\nwrong answer!"
 		end
 	end
+	
+	puts "\n" + ("-" * 10)
+	puts "\n your reversed array is: #{reversed_array}"
 end
 
 start
