@@ -1,23 +1,19 @@
-# This is an algorithm for reversing an array without using 'reverse' method
-
-
-# arr = ['dog', 'cat', 'bear','hello']
-# arr_ln = arr.size - 1
-
-# # using a temporary array
-# arr_rev << arr.pop until arr.empty?
-
-# # not using a temporary array
-# (0..(arr_ln/2)).each do |i|
-# 	x = arr[i]
-# 	arr[i] =  arr[(arr_ln - i)]
-# 	arr[(arr_ln - i)] = x
-# end
+# This program gets an array and reverses it using two different algorithms without implementing 'reverse' method. 
 
 def method_1(arr)
 	arr_rev = []
 	arr_rev << arr.pop until arr.empty?
 	return arr_rev
+end
+	
+def method_2(arr)
+	arr_ln = arr.size - 1
+	(0..(arr_ln/2)).each do |i|
+		x = arr[i]
+		arr[i] =  arr[(arr_ln - i)]
+		arr[(arr_ln - i)] = x
+	end
+	return arr
 end
 
 
@@ -42,10 +38,11 @@ def start()
 		puts "\n Would like me to use a temporary array or not? [yes/no]"
 		answer = $stdin.gets.chomp.downcase
 		if answer == "yes"
-			# method_1()
+			reversed_array = method_1(arr)
 			break
 		elsif answer == "no"
-			# method_2()
+			reversed_array = method_2(arr)
+			break
 		else
 			puts "\nwrong answer!"
 		end
