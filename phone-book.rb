@@ -71,10 +71,12 @@ go_next = false
 			next
 		end
 	end
-	
-	starts = targets.first
-	finishs = targets.last
-	sorted_section = contacts_array[starts..finishs].sort_by! do |key|
-		key[0].split(" ")[0].upcase
+	if targets.size > 1
+		starts = targets.first
+		finishs = targets.last
+		sorted_section = contacts_array[starts..finishs].sort_by! do |key|
+			key[0].split(" ")[0].upcase
+		end
 	end
+	targets.clear
 end
