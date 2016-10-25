@@ -77,6 +77,13 @@ go_next = false
 		sorted_section = contacts_array[starts..finishs].sort_by! do |key|
 			key[0].split(" ")[0].upcase
 		end
+		
+		ss_index = 0
+		(starts..finishs).each do |k|
+			contacts_array[k] = sorted_section[ss_index]
+			ss_index += 1
+		end
+		sorted_section.clear
 	end
 	targets.clear
 end
