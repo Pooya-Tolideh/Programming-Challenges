@@ -47,7 +47,20 @@ targets = []
 redunts = []
 
 full_names = contacts.keys
+go_next = false
 (0..count-1).each do |i|
+	redunts.each do |redunt| 
+		if i == redunt
+			puts "reee"
+			go_next =  !go_next
+			break
+		elsif go_next
+			go_next = !go_next
+		else
+			next
+		end
+	end
+	next if go_next
 	
 	ref_name = full_names[i].split(" ")[1]
 	(i+1..count-1).each do |j|
