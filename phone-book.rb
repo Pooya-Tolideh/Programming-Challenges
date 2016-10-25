@@ -43,9 +43,19 @@ end
 
 contacts = Hash[contacts_array]
 count = contacts.size
+targets = []
+redunts = []
 
 full_names = contacts.keys
 (0..count-1).each do |i|
 	
 	ref_name = full_names[i].split(" ")[1]
+	(i+1..count-1).each do |j|
+		if full_names[j].split(" ")[1] == ref_name
+			targets << j
+			redunts << j
+		else
+			next
+		end
+	end	
 end
