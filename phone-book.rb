@@ -40,3 +40,12 @@ contacts_array = contacts.to_a
 contacts_array.sort_by! do |key|
 	key[0].split(" ")[1].upcase
 end
+
+contacts = Hash[contacts_array]
+count = contacts.size
+
+full_names = contacts.keys
+(0..count-1).each do |i|
+	
+	ref_name = full_names[i].split(" ")[1]
+end
