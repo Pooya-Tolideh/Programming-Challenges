@@ -35,3 +35,8 @@ while !finish
 		end
 	end
 end
+
+contacts_array = contacts.to_a
+contacts_array.sort_by! do |key|
+	key[0].split(" ")[1].upcase
+end
