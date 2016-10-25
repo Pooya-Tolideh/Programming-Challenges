@@ -6,8 +6,9 @@ first_name = gets.chomp.downcase.capitalize
 print "\nLast Name: "
 last_name = gets.chomp.downcase.capitalize
 
-print "\nPhone Number: "
-phone = gets.chomp
-
-person_info = Hash.new
-contacts[(first_name+" "+last_name)] = phone
+while true
+	print "\nPhone Number: "
+	phone = gets.chomp
+	(phone.to_i == 0) ? (puts "\n\nInvalid input. Please enter a valid number!") : break
+end 
+contacts = Hash.new
