@@ -61,6 +61,7 @@ go_next = false
 		end
 	end
 	next if go_next
+	targets << i
 	
 	ref_name = full_names[i].split(" ")[1]
 	(i+1..count-1).each do |j|
