@@ -28,6 +28,19 @@ def convertor(time, pom):
 def print_time(slices, pom):
 # prints out the calculated time portions
 	print("Number of sessions/time: ", slices, "\n")
+	
+	for slc in slices:						# loops through slices and prints out the portion in hours and minutes
+		hour, minute = convertor(slc, pom)
+		if hour == 0:
+			hour = ""
+		else:
+			hour = " {}h ".format(hour)
+		if minute == 0:
+			minute = ""
+		else:
+			minute = " {}m".format(minute)
+		print("{}.{}{}".format(i, hour, minute))
+		i += 1	
 
 
 def main():
