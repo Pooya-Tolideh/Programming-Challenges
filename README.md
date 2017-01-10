@@ -1,2 +1,2 @@
-# Python-Challenges
-A series of solutions/algorithms written for popular Python coding challenges
+# Programming-Challenges
+A series of small programming projects created for personal learning.
