@@ -8,6 +8,11 @@ def slicer(total, pom):							# slices time various portions
 	while (total - np.sum(slices) >= 1 and counter <= 5):		#counter runs until there's no time left or slices reaches total number of projects
 		slices.append((total - np.sum(slices)) / 2)
 		counter += 1
+		
+	for slc in slices:						# round each time portion in slices
+		slices[slices.index(slc)] = int(round(slc))
+		
+	return slices
 
 def main():
 	
