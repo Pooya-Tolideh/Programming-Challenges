@@ -1,14 +1,13 @@
 import numpy as np
 
-def slicer(total, pom):
+def slicer(total, pom, proj_num):
 # slices total time into various portions
-	counter = 1
 	total = round((total * 60)/pom)					# total number of pomodoro sessions
 	
 	slices = [total * 0.4]						#first(most important) portion
-	while (total - np.sum(slices) >= 1 and counter <= 5):		#counter runs until there's no time left or slices reaches total number of projects
+	while (total - np.sum(slices) >= 1 and proj_num > 1):		#counter runs until there's no time left or slices reaches total number of projects
 		slices.append((total - np.sum(slices)) / 2)
-		counter += 1
+		proj_num -= 1
 		
 	for slc in slices:						# round each time portion in slices
 		slices[slices.index(slc)] = int(round(slc))
@@ -46,8 +45,9 @@ def print_time(slices, pom):
 def main():
 	
 	pom = 50.0							# pomodoro duration
+	proj_num = 5							# number of portions 
 	total = float(input("how much time do you have? "))
-	slices = slicer(total, pom)
+	slices = slicer(total, pom, proj_num)
 	print_time(slices, pom)
   
 main()
