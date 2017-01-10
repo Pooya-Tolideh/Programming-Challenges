@@ -15,6 +15,12 @@ def slicer(total, pom):
 		
 	return slices
 
+
+def print_time(slices, pom):
+# prints out the calculated time portions
+	print("Number of sessions/time: ", slices, "\n")
+
+
 def main():
 	
 	pom = 50.0							# pomodoro duration
