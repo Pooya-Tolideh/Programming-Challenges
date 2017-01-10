@@ -48,5 +48,6 @@ def main():
 	pom = 50.0							# pomodoro duration
 	total = float(input("how much time do you have? "))
 	slices = slicer(total, pom)
+	print_time(slices, pom)
   
 main()
