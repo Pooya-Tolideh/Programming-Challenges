@@ -7,11 +7,13 @@ def manage_time():
 	slices = []
 	total = float(input("how much time do you have? "))
 	
-	slices.append(total * 0.6)
+	slices.append(total * 0.4)
 	
-	slices.append((total -  slices[0]) * 0.6)
+	slices.append(total * 0.3)
 	
-	slices.append((total - slices[0] - slices[1]) / 2)
+	slices.append(total * 0.15)
+	
+	slices.append(total * 0.075)
 	
 	slices.append(slices[-1])
 	
@@ -29,7 +31,3 @@ def manage_time():
 			minute = "{}m".format(minute)
 		print("{}. {} {}".format(i, hour, minute))
 		i = i + 1
-
-
-manage_time()
-
