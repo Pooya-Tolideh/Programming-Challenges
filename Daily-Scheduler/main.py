@@ -16,6 +16,15 @@ def slicer(total, pom):
 	return slices
 
 
+def convertor(time, pom):
+# converts each pomodoro time portion into hours and minutes
+	time = (time * pom) / 60
+	hour = int(time)
+	minute = int((time - hour) * 60)
+	return(hour, minute)
+
+
+
 def print_time(slices, pom):
 # prints out the calculated time portions
 	print("Number of sessions/time: ", slices, "\n")
